@@ -1,0 +1,175 @@
+body{
+  font-family: "筑紫B丸ゴシック", sans-serif; 
+  color: #4d5156;
+}
+
+#Touroku{
+    background-color: #4957b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+datalist{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - 440px);
+  display: flex;  /* ← 追加 */
+  gap: 30px;  /* ← 追加：左右の間隔 */
+}
+
+.left-side {
+  flex: 0 0 400px;  /* ← 追加：左側を固定幅 */
+  min-width: 100px;
+}
+
+.right-side {
+  flex: 1;  /* ← 追加：右側は残りのスペース */
+}
+
+#resultList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.consequence{
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  border: none;
+  border-radius: 0;
+  background-color: #c48fe6;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 200px;
+  height: 200px;
+  font-size:26px;
+  display: flex;
+  flex-direction: row; 
+  overflow-wrap: break-word;
+}
+
+.consequence::before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+input{
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#Title{
+  color: #364e96;/*文字色*/
+  border: solid 3px #364e96;/*線色*/
+  padding: 0.5em;/*文字周りの余白*/
+  border-radius: 0.5em;/*角丸*/
+  text-align: center;/*中央揃え*/
+  font-size: 40px;/*文字サイズ*/
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #ffffff;  /* アイコンの色 */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.deleteButton:hover {
+  color: #ff5252;
+}
+
+#resultArea{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#resultList {
+  display: flex;
+  overflow-wrap: break-word;  /* 折り返し */
+  gap: 15px;  /* 付箋同士の間隔 */
+
+}
+
+#error{
+  color: rgb(255, 63, 63);
+  font-size: 17px;
+  /* animation: successPulse 1.4s infinite ease-in-out; */
+}
+
+/* #error {
+  font-weight: 900;
+  color: #00ff3c;
+  text-shadow:
+    0 0 4px #00ff3c,
+    0 0 8px #3bff72,
+    0 0 14px #00ff44,
+    0 0 28px rgba(0, 255, 60, 0.7);
+  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+  animation: successPulse 1.4s infinite ease-in-out;
+}  */
+
+/* @keyframes successPulse {
+  0% {
+    text-shadow:
+      0 0 4px #00ff3c,
+      0 0 8px #3bff72,
+      0 0 14px #00ff44,
+      0 0 28px rgba(0, 255, 60, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow:
+      0 0 8px #3bff72,
+      0 0 16px #1aff5c,
+      0 0 28px #00ff44,
+      0 0 40px rgba(0, 255, 60, 0.85);
+    transform: scale(1.06);
+  }
+  100% {
+    text-shadow:
+      0 0 4px #00ff3c,
+      0 0 8px #3bff72,
+      0 0 14px #00ff44,
+      0 0 28px rgba(0, 255, 60, 0.7);
+    transform: scale(1);
+  }
+} */
+
+#Gakusyu_Naiyo{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#Gakusyu_Zikan{
+  font-size: 20px;
+  font-weight: bold;
+}

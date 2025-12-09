@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学習記録</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'jkg2gyb',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+</head>
+<body>
+  <h1 id="Title">学習記録</h1>
+  <div class="container">
+    <div class="left-side">
+      <!-- 左側：入力フォーム -->
+      <p id="Gakusyu_Naiyo">学習内容</p>
+
+      <!-- 教科ごとのラベル設定 -->
+      <p>教科ラベル</p>
+      <select id="Subject">
+        <option value="Math">数学</option>
+        <option value="???  ">英語</option>
+        <option value="??? ">国語</option>
+        <option value="??? ">理科</option>
+        <option value="??? ">社会</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="React">React</option>
+        <option value="Python">Python</option>
+        <option value="TypeScript">TypeScript</option>
+        <option value=""></option>
+        <option value="Other">その他</option>
+      </select>
+
+      <input type="text" list="contentlist" id="studycontent"/>
+      <p id="Gakusyu_Zikan">学習時間</p>
+      <input type="text" list="datalist" id="studytime"/>
+      <datalist id="datalist">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </datalist>
+      
+      <p id="contentlink">入力されてる学習内容：</p>
+      <p id="timelink">入力されてる学習時間：</p>
+      
+      <div>
+        <p id="error"></p>
+      </div>
+
+      <button id="Touroku">登録</button>
+      <p id="totaltimehyozi">合計時間：0h/1000h</p>
+    </div>
+    <div class="right-side">
+      <!-- 右側：付箋表示 -->
+      <p class="consequence" id="consequence">プレビュー</p>
+      <div id="resultList"></div>
+    </div>
+  </div>
+  <script src="studytime.js"></script>
+  <link rel="stylesheet" href="style.css">
+  </div>
+</body>
+</html>
